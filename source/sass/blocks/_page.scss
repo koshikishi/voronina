@@ -1,0 +1,19 @@
+.page {
+  min-width: 320px;
+  margin: 0;
+  font: #{$fontSizeTextMobile}/#{$lineHeightNormal} $fontFamilyText;
+  color: $colorText;
+  background: no-repeat $colorWhite;
+
+  @media (min-width: 680px) {
+    font-size: $fontSizeTextTablet;
+    background-image: url("../img/bg-tablet.png");
+    background-position: center -1769px;
+  }
+
+  @media (min-width: 1180px) {
+    font-size: $fontSizeTextDesktop;
+    background-image: url("../img/bg-desktop.png");
+    background-position: center 169px;
+  }
+}
