@@ -13,7 +13,7 @@
   <body class="page">
     <header class="header page__header" id="header">
       <nav class="header__nav">
-        <a class="logo header__logo">
+        <a class="logo">
           <picture>
             <source srcset="img/logo-mobile.webp 112w, img/logo-tablet.webp 201w, img/logo-desktop.webp 254w" sizes="(min-width: 1180px) 254px, (min-width: 680px) 201px, 112px" type="image/webp">
             <img srcset="img/logo-mobile.png 112w, img/logo-tablet.png 201w, img/logo-desktop.png 254w" sizes="(min-width: 1180px) 254px, (min-width: 680px) 201px, 112px" src="img/logo-mobile.png" alt="Логотип сайта Дарьи Ворониной" width="254" height="76">
@@ -30,10 +30,14 @@
             <a href="#footer">Контакты</a>
           </li>
         </ul>
-        <a class="header__phone" href="tel:+79166677112">+ 7 916 66 77 112</a>
-        <button class="header__icon-menu" type="button">
-          <span class="visually-hidden">Open Menu</span>
-        </button>
+        <div class="header__phone">
+          <a href="tel:+79166677112">+ 7 916 66 77 112</a>
+        </div>
+        <div class="header__icon-menu">
+          <button type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
       </nav>
       <nav class="menu-mobile header__menu-mobile">
         <div class="menu-mobile__top">
@@ -44,7 +48,7 @@
             </picture>
           </a>
           <button class="header__icon-close" type="button">
-            <span class="visually-hidden">Close Menu</span>
+            <span class="visually-hidden">Закрыть меню</span>
           </button>
         </div>
         <ul class="menu-mobile__list">
