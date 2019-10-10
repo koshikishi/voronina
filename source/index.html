@@ -47,7 +47,7 @@
               <img srcset="img/logo-mobile.png 112w, img/logo-tablet.png 201w, img/logo-desktop.png 254w" sizes="(min-width: 1180px) 254px, (min-width: 680px) 201px, 112px" src="img/logo-mobile.png" alt="Логотип сайта Дарьи Ворониной" width="254" height="76">
             </picture>
           </a>
-          <button class="header__icon-close" type="button">
+          <button class="menu-mobile__icon-close" type="button">
             <span class="visually-hidden">Закрыть меню</span>
           </button>
         </div>
@@ -71,25 +71,27 @@
       <h1 class="visually-hidden">Дарья Воронина — фотограф в Москве и Московской области</h1>
       <section class="hero page__hero">
         <div class="hero__inner">
-          <div class="hero__columns">
+          <picture class="hero__image">
+            <source srcset="img/hero_image-mobile.webp 320w, img/hero_image-tablet.webp 327w, img/hero_image-desktop.webp 348w" sizes="(min-width: 1180px) 348px, (min-width: 680px) 327px, 320px" type="image/webp">
+            <img srcset="img/hero_image-mobile.jpg 320w, img/hero_image-tablet.jpg 327w, img/hero_image-desktop.jpg 348w" sizes="(min-width: 1180px) 348px, (min-width: 680px) 327px, 320px" src="img/hero_image-desktop.jpg" alt="Дарья Воронина" width="348" height="533">
+          </picture>
+          <div class="hero__column">
             <div class="hero__content">
-              <h2 class="hero__title" data-bg-text1="Food" data-bg-text2="Photogrphy">Дарья Воронина</h2>
+              <h2 class="hero__title" data-bg-text1="Food" data-bg-text2="Photogrphy">
+                <span>Дарья Воронина</span>
+              </h2>
               <p class="hero__text">Food — фотограф и food — стилист в Москве и Московской области</p>
               <a class="button button--white" href="#works">Портфолио</a>
             </div>
-            <picture class="hero__image">
-              <source srcset="img/hero_image-mobile.webp 320w, img/hero_image-tablet.webp 327w, img/hero_image-desktop.webp 384w" sizes="(min-width: 1180px) 384px, (min-width: 680px) 327px, 320px" type="image/webp">
-              <img srcset="img/hero_image-mobile.jpg 320w, img/hero_image-tablet.jpg 327w, img/hero_image-desktop.jpg 384w" sizes="(min-width: 1180px) 384px, (min-width: 680px) 327px, 320px" src="img/hero_image-desktop.jpg" alt="Дарья Воронина" width="384" height="533">
-            </picture>
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+              </li>
+            </ul>
           </div>
-          <ul class="social hero__social">
-            <li class="social__item">
-              <a class="social__link" href="https://www.instagram.com/" target="_blank">Instagram</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://www.facebook.com/" target="_blank">Facebook</a>
-            </li>
-          </ul>
         </div>
       </section>
       <section class="works page__works" id="works">

@@ -9,6 +9,10 @@
     background-position: calc(50% - 46px) top;
   }
 
+  @media (min-width: 1180px) {
+    background: none;
+  }
+
   &--shown {
     display: block;
 
@@ -22,7 +26,7 @@
   @extend .header__nav;
 }
 
-.header__icon-close {
+.menu-mobile__icon-close {
   position: relative;
   width: 16px;
   height: 15px;
