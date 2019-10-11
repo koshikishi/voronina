@@ -22,3 +22,19 @@
   position: absolute;
   z-index: 2;
 }
+
+.page__hero {
+  margin-bottom: 80px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 154px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 140px;
+  }
+}
+
+.page__works {
+  margin-bottom: 55px;
+}
