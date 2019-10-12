@@ -37,4 +37,16 @@
 
 .page__works {
   margin-bottom: 55px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 107px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 57px;
+  }
+}
+
+.page__portfolio {
+  position: relative;
 }
