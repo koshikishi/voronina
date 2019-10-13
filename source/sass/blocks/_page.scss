@@ -49,4 +49,13 @@
 
 .page__portfolio {
   position: relative;
+  margin-bottom: 80px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 129px;
+  }
 }
