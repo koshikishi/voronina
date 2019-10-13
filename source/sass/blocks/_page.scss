@@ -71,3 +71,15 @@
     margin-bottom: 58px;
   }
 }
+
+.page__price {
+  margin-bottom: 71px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 144px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 0;
+  }
+}
