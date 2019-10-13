@@ -59,3 +59,15 @@
     margin-bottom: 129px;
   }
 }
+
+.page__about {
+  margin-bottom: 79px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 58px;
+  }
+}
