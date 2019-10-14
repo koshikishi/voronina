@@ -34,12 +34,12 @@
           <a href="tel:+79166677112">+ 7 916 66 77 112</a>
         </div>
         <div class="header__icon-menu">
-          <button type="button">
+          <a href="#menu-mobile">
             <span class="visually-hidden">Открыть меню</span>
-          </button>
+          </a>
         </div>
       </nav>
-      <nav class="menu-mobile header__menu-mobile">
+      <nav class="menu-mobile header__menu-mobile" id="menu-mobile">
         <div class="menu-mobile__top">
           <a class="logo menu-mobile__logo">
             <picture>
@@ -47,9 +47,9 @@
               <img srcset="img/logo-mobile.png 112w, img/logo-tablet.png 201w, img/logo-desktop.png 254w" sizes="(min-width: 1180px) 254px, (min-width: 680px) 201px, 112px" src="img/logo-mobile.png" alt="Логотип сайта Дарьи Ворониной" width="254" height="76">
             </picture>
           </a>
-          <button class="menu-mobile__icon-close" type="button">
+          <a class="menu-mobile__icon-close" href="#">
             <span class="visually-hidden">Закрыть меню</span>
-          </button>
+          </a>
         </div>
         <ul class="menu-mobile__list">
           <li class="menu-mobile__item">
@@ -317,5 +317,6 @@
         <a class="social__link" href="https://www.facebook.com/" target="_blank">Facebook</a>
       </li>
     </ul>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

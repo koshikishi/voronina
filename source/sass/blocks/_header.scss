@@ -77,16 +77,12 @@
     display: none;
   }
 
-  button {
+  a {
     position: relative;
     display: block;
     width: 25px;
     height: 14px;
-    padding: 0;
     color: $colorWhite;
-    background: none;
-    border: none;
-    cursor: pointer;
     transition: opacity 0.2s;
 
     @media (min-width: 680px) {
