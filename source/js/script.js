@@ -87,3 +87,32 @@ for (var link in links) {
     addLinksClickHandler(links[link][j], sections[link]);
   }
 }
+
+// Оживление плавающего блока социальных ссылок
+var social = document.querySelector('.social--vertical');
+social.style.opacity = 0;
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop < 700) {
+    (function socialFadeOut() {
+      if (social.style.opacity > 0) {
+        social.style.opacity -= 0.1;
+        setTimeout(socialFadeOut, 50);
+      } else {
+        social.style.display = 'none';
+      }
+    })();
+  } else {
+    social.style.display = null;
+
+    (function socialFadeIn() {
+      var opacityValue = parseFloat(social.style.opacity);
+
+      if (opacityValue < 1) {
+        opacityValue += 0.1;
+        social.style.opacity = opacityValue;
+        setTimeout(socialFadeIn, 50);
+      }
+    })();
+  }
+};
