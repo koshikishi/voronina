@@ -88,11 +88,16 @@ for (var link in links) {
   }
 }
 
-// Оживление плавающего блока социальных ссылок
+// Оживление блока социальных ссылок и блока пагинации
 var social = document.querySelector('.social--vertical');
 social.style.opacity = 0;
 
+var pagination = document.querySelector('.pagination');
+var paginationLinks = pagination.querySelectorAll('.pagination__link');
+paginationLinks[0].classList.add('pagination__link--active');
+
 window.onscroll = function () {
+  // Оживление плавающего блока социальных ссылок
   if (document.documentElement.scrollTop < 700) {
     (function socialFadeOut() {
       if (social.style.opacity > 0) {
@@ -115,4 +120,50 @@ window.onscroll = function () {
       }
     })();
   }
+
+  // Оживление блока пагинации
+  if (document.documentElement.scrollTop < 600) {
+    if (pagination.classList.contains('pagination--right')) {
+      pagination.classList.remove('pagination--right');
+    }
+  } else {
+    if (!pagination.classList.contains('pagination--right')) {
+      pagination.classList.add('pagination--right');
+    }
+  }
+
+  // Активные ссылки блока пагинации
+  if (isSectionInView(sections.header)) {
+    paginationActive(0);
+  }
+  if (isSectionInView(sections.works)) {
+    paginationActive(1);
+  }
+  if (isSectionInView(sections.about)) {
+    paginationActive(2);
+  }
+  if (isSectionInView(sections.price)) {
+    paginationActive(4);
+  }
+  if (isSectionInView(sections.footer)) {
+    paginationActive(5);
+  }
 };
+
+// Проверка, находится ли блок во вьюпорте
+function isSectionInView(elmnt) {
+  var scrollY = window.scrollY || window.pageYOffset;
+  var sectionPosition = elmnt.getBoundingClientRect().top + scrollY;
+
+  if (scrollY >= sectionPosition && scrollY < sectionPosition + elmnt.clientHeight || scrollY + window.innerHeight >= document.body.clientHeight) {
+    return true;
+  }
+
+  return false;
+}
+
+// Активная ссылка блока пагинации
+function paginationActive(n) {
+  pagination.querySelector('.pagination__link--active').classList.remove('pagination__link--active');
+  paginationLinks[n].classList.add('pagination__link--active');
+}
