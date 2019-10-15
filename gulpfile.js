@@ -149,12 +149,12 @@ exports.refresh = refresh;
 // Создание сборки проекта
 exports.build = series(
   clean,
-  parallel(copy, css, js, modernizr, html)
+  parallel(copy, css, js, html)
 );
 
 // Создание сборки проекта и запуск сервера Browsersync
 exports.start = series(
   clean,
-  parallel(copy, css, js, modernizr, html),
+  parallel(copy, css, js, html),
   server
 );
