@@ -59,6 +59,8 @@
 
   &:hover,
   &:focus {
+    outline: none;
+
     &::after {
       color: $colorGrayXDark;
     }
