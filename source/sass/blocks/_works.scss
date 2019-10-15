@@ -1,11 +1,28 @@
 .works {
   @media (min-width: 680px) {
-    background: url("../img/works_bg-tablet.png") calc(50% - 12px) 28px no-repeat;
+    background: calc(50% - 12px) 28px no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/works_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/works_bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1180px) {
-    background-image: url("../img/works_bg-desktop.png");
     background-position: calc(50% - 14px) 59px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/works_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/works_bg-desktop.webp");
+    }
   }
 }
 

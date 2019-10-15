@@ -7,14 +7,30 @@
 
   @media (min-width: 680px) {
     font-size: $fontSizeTextTablet;
-    background-image: url("../img/bg-tablet.png");
     background-position: center -1769px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1180px) {
     font-size: $fontSizeTextDesktop;
-    background-image: url("../img/bg-desktop.png");
     background-position: center 169px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/bg-desktop.webp");
+    }
   }
 }
 

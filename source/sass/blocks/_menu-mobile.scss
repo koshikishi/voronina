@@ -5,12 +5,24 @@
 
   @media (min-width: 680px) {
     min-height: 823px;
-    background-image: url("../img/menu_bg-tablet.png");
     background-position: calc(50% - 46px) top;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/menu_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/menu_bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1180px) {
-    background: none;
+    .no-js &,
+    .no-webp &,
+    .webp & {
+      background: none;
+    }
   }
 
   &--shown,

@@ -1,14 +1,31 @@
 .about {
   @media (min-width: 680px) {
     padding-top: 135px;
-    background: url("../img/about_bg-tablet.png") calc(50% + 15px) top no-repeat;
+    background: calc(50% + 15px) top no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/about_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/about_bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1180px) {
     min-height: 832px;
     padding-top: 0;
-    background-image: url("../img/about_bg-desktop.png");
     background-position: calc(50% - 84px) 2px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/about_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/about_bg-desktop.webp");
+    }
   }
 }
 

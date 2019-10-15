@@ -1,13 +1,30 @@
 .price {
   @media (min-width: 680px) {
     padding-top: 62px;
-    background: url("../img/price_bg-tablet.png") calc(50% + 83px) top no-repeat;
+    background: calc(50% + 83px) top no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/price_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/price_bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1180px) {
     padding-top: 39px;
-    background-image: url("../img/price_bg-desktop.png");
     background-position: calc(50% + 141px) top;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/price_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/price_bg-desktop.webp");
+    }
   }
 }
 

@@ -7,13 +7,30 @@
     min-height: 371px;
     padding-top: 0;
     padding-bottom: 0;
-    background: url("../img/portfolio_bg-tablet.png") calc(50% - 126px) top no-repeat;
+    background: calc(50% - 126px) top no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/portfolio_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/portfolio_bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1180px) {
     min-height: 506px;
-    background-image: url("../img/portfolio_bg-desktop.png");
     background-position: calc(50% - 70px) top;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/portfolio_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/portfolio_bg-desktop.webp");
+    }
   }
 }
 
@@ -74,8 +91,21 @@
     padding-top: 45px;
     padding-bottom: 45px;
     background:
-      url("../img/portfolio_border-mobile.png") calc(50% + 2px) top no-repeat,
+      calc(50% + 2px) top no-repeat,
       content-box rgba($colorBlack, 0.5);
+
+    .no-js &,
+    .no-webp & {
+      background-image:
+        url("../img/portfolio_border-mobile.png"),
+        none;
+    }
+
+    .webp & {
+      background-image:
+        url("../img/portfolio_border-mobile.webp"),
+        none;
+    }
   }
 
   @media (min-width: 680px) {
@@ -84,7 +114,12 @@
 
     &::before {
       content: none;
-      background: none;
+
+      .no-js &,
+      .no-webp &,
+      .webp & {
+        background: none;
+      }
     }
   }
 
@@ -147,14 +182,31 @@
     right: -39px;
     width: 24px;
     height: 27px;
-    background: url("../img/portfolio_icon-pdf-mobile.png") center no-repeat;
+    background: center no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/portfolio_icon-pdf-mobile.png");
+    }
+
+    .webp & {
+      background-image: url("../img/portfolio_icon-pdf-mobile.webp");
+    }
 
     @media (min-width: 680px) {
       top: -3px;
       right: -57px;
       width: 32px;
       height: 36px;
-      background-image: url("../img/portfolio_icon-pdf-tablet.png");
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/portfolio_icon-pdf-tablet.png");
+      }
+
+      .webp & {
+        background-image: url("../img/portfolio_icon-pdf-tablet.webp");
+      }
     }
 
     @media (min-width: 1180px) {
@@ -162,7 +214,15 @@
       right: -51px;
       width: 24px;
       height: 28px;
-      background-image: url("../img/portfolio_icon-pdf-desktop.png");
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/portfolio_icon-pdf-desktop.png");
+      }
+
+      .webp & {
+        background-image: url("../img/portfolio_icon-pdf-desktop.webp");
+      }
     }
   }
 }

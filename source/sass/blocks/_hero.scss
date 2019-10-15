@@ -4,22 +4,42 @@
 
   @media (min-width: 680px) {
     min-height: 823px;
-    background-image:
-      url("../img/hero_border-tablet.png"),
-      url("../img/hero_bg-tablet.jpg");
     background-position:
       calc(50% + 478px) 100px,
       calc(50% + 304px) top;
+
+    .no-js &,
+    .no-webp & {
+      background-image:
+        url("../img/hero_border-tablet.png"),
+        url("../img/hero_bg-tablet.jpg");
+    }
+
+    .webp & {
+      background-image:
+        url("../img/hero_border-tablet.webp"),
+        url("../img/hero_bg-tablet.webp");
+    }
   }
 
   @media (min-width: 1180px) {
     min-height: 780px;
-    background-image:
-      url("../img/hero_border-desktop.png"),
-      url("../img/hero_bg-desktop.jpg");
     background-position:
       calc(50% + 347px) 100px,
       calc(50% + 417px) top;
+
+    .no-js &,
+    .no-webp & {
+      background-image:
+        url("../img/hero_border-desktop.png"),
+        url("../img/hero_bg-desktop.jpg");
+    }
+
+    .webp & {
+      background-image:
+        url("../img/hero_border-desktop.webp"),
+        url("../img/hero_bg-desktop.webp");
+    }
   }
 }
 
@@ -99,8 +119,17 @@
     right: 0;
     left: 0;
     height: 480px;
-    background: url("../img/hero_border-mobile.png") calc(50% - 28px) 105px no-repeat rgba($colorBlack, 0.4);
+    background: calc(50% - 28px) 105px no-repeat rgba($colorBlack, 0.4);
     border-radius: 2px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/hero_border-mobile.png");
+    }
+
+    .webp & {
+      background-image: url("../img/hero_border-mobile.webp");
+    }
   }
 
   @media (min-width: 680px) {
@@ -109,7 +138,12 @@
 
     &::before {
       content: none;
-      background: none;
+
+      .no-js &,
+      .no-webp &,
+      .webp & {
+        background: none;
+      }
     }
   }
 
