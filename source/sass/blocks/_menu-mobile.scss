@@ -151,9 +151,9 @@
   &::after {
     content: "";
     position: absolute;
-    right: 50%;
+    right: 51%;
     bottom: -5px;
-    left: 50%;
+    left: 51%;
     height: 4px;
     background-color: $colorPrimaryDark;
     transition-duration: 0.5s;

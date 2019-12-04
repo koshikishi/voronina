@@ -60,7 +60,8 @@
 
   @media (min-width: 1180px) {
     justify-content: flex-end;
-    width: 1180px;
+    width: auto;
+    max-width: 1180px;
     padding-top: 159px;
   }
 }
@@ -68,14 +69,14 @@
 .hero__image {
   position: absolute;
   top: 0;
-  left: 50%;
+  right: 50%;
   width: 320px;
-  transform: translateX(-50%);
+  transform: translateX(50%);
 
   @media (min-width: 680px) {
     position: relative;
     top: auto;
-    left: auto;
+    right: auto;
     z-index: 1;
     width: 327px;
     transform: none;
