@@ -30,6 +30,7 @@
   }
 
   @media (min-width: 680px) {
+    flex-shrink: 0;
     width: 184px;
 
     &:first-child {
