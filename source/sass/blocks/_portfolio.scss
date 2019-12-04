@@ -52,12 +52,13 @@
 .portfolio__image {
   position: absolute;
   top: 45px;
-  left: 50%;
+  right: 50%;
   width: 320px;
-  transform: translateX(-50%);
+  transform: translateX(50%);
 
   @media (min-width: 680px) {
     top: 63px;
+    right: auto;
     left: -224px;
     width: 423px;
     transform: none;

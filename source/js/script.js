@@ -97,8 +97,10 @@ var paginationLinks = pagination.querySelectorAll('.pagination__link');
 paginationLinks[0].classList.add('pagination__link--active');
 
 window.onscroll = function () {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
   // Оживление плавающего блока социальных ссылок
-  if (document.documentElement.scrollTop < 700) {
+  if (scrollTop < 700) {
     (function socialFadeOut() {
       if (social.style.opacity > 0) {
         social.style.opacity -= 0.1;
@@ -108,7 +110,7 @@ window.onscroll = function () {
       }
     })();
   } else {
-    social.style.display = null;
+    social.style.display = 'flex';
 
     (function socialFadeIn() {
       var opacityValue = parseFloat(social.style.opacity);
@@ -122,7 +124,7 @@ window.onscroll = function () {
   }
 
   // Оживление блока пагинации
-  if (document.documentElement.scrollTop < 600) {
+  if (scrollTop < 600) {
     if (pagination.classList.contains('pagination--right')) {
       pagination.classList.remove('pagination--right');
     }
