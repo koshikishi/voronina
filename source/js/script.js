@@ -110,7 +110,7 @@ window.onscroll = function () {
       }
     })();
   } else {
-    social.style.display = 'flex';
+    social.style.removeProperty('display');
 
     (function socialFadeIn() {
       var opacityValue = parseFloat(social.style.opacity);
